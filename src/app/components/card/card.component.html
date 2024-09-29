@@ -1,0 +1,19 @@
+<section class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <img [src]="usuario?.avatar_url" />
+    </div>
+    <div class="card-body">
+      <h2>{{ usuario?.name }}</h2>
+      <h4>{{ usuario?.login }}</h4>
+      <p>{{ usuario?.bio }}</p>
+    </div>
+    <div class="card-footer">
+      <div>
+        <div>{{ usuario?.followers }}</div>
+        <div>{{ usuario?.following }}</div>
+        <div>{{ usuario?.public_repos }}</div>
+      </div>
+    </div>
+  </div>
+</section>
