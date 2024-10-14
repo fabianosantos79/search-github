@@ -15,7 +15,7 @@ export class CardComponent implements OnInit {
   constructor(private service: UserService){}
 
   ngOnInit(): void {
-    this.service.getUser('fabianosantos79').subscribe(user => this.usuario = user);
+    this.service.getUser('facebook').subscribe(user => this.usuario = user);
   }
 
 }
