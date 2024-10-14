@@ -1,4 +1,10 @@
 <form class="form">
-  <input class="input-text" type="text" id="titulo" name="titulo" />
-  <button class="btn-buscar">Buscar</button>
+  <input
+    class="input-text"
+    type="text"
+    id="titulo"
+    name="titulo"
+    [(ngModel)]="titulo"
+  />
+  <button class="btn-buscar" (click)="enviarTitulo()">Buscar</button>
 </form>

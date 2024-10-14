@@ -6,3 +6,16 @@ h1 {
   color: #ec4899;
   text-shadow: 1, 1, white;
 }
+.card-container {
+  margin-top: 30px;
+  display: flex;
+  background-color: aliceblue;
+  width: 400px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}

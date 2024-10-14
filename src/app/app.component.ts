@@ -16,13 +16,12 @@ import { User } from '../models/user';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
+titulo: string = '';
 
   constructor(private userService: UserService){}
 
-  ngOnInit(): void{
-    this.userService.getUser('facebook').subscribe((user) => console.log(user)
-    )
+  ngOnInit(){
+    this.titulo = this.userService.titulo;
   }
-
 
 }

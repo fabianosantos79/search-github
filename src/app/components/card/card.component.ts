@@ -11,11 +11,13 @@ import { User } from '../../../models/user';
 })
 export class CardComponent implements OnInit {
   usuario: User | undefined;
+  titulo : string = "";
 
   constructor(private service: UserService){}
 
   ngOnInit(): void {
-    this.service.getUser('facebook').subscribe(user => this.usuario = user);
+    this.titulo = this.service.titulo;
+    this.service.getUser(this.service.titulo).subscribe(user => this.usuario = user);
   }
 
 }
