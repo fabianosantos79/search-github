@@ -1,27 +1,28 @@
+import { User } from './../models/user';
 import { UserService } from './services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FormComponent } from "./components/form/form.component";
-import { CardComponent } from "./components/card/card.component";
 import { ContainerComponent } from "./components/container/container.component";
 import { HttpClientModule } from '@angular/common/http';
-import { User } from '../models/user';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormComponent, CardComponent, ContainerComponent, HttpClientModule],
+  imports: [CommonModule, RouterOutlet, ContainerComponent, HttpClientModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
-titulo: string = '';
+export class AppComponent{
+
+  usuario: User | undefined;
+  username: string = '';
 
   constructor(private userService: UserService){}
 
-  ngOnInit(){
-    this.titulo = this.userService.titulo;
+  enviar(){
+    this.userService.getUser(this.username).subscribe((user: User) => this.usuario = user);
   }
 
 }

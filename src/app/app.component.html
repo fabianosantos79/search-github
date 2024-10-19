@@ -1,26 +1,34 @@
 <app-container>
   <h1>Consulta Github</h1>
   <form class="form">
-    <input class="input-text" type="text" id="titulo" name="titulo" />
-    <button class="btn-buscar">Buscar</button>
+    <input
+      class="input-text"
+      type="text"
+      id="titulo"
+      name="username"
+      [(ngModel)]="username"
+    />
+    <button class="btn-buscar" (click)="enviar()">Buscar</button>
   </form>
+
   <section class="card-container">
     <div class="card">
       <div class="card-header">
-        <!-- <img [src]="usuario?.avatar_url" /> -->
+        <img [src]="usuario?.avatar_url" />
       </div>
       <div class="card-body">
-        <!-- <h2>{{ usuario?.name }}</h2>
+        <h2>{{ usuario?.name }}</h2>
         <h4>{{ usuario?.login }}</h4>
-        <p>{{ usuario?.bio }}</p> -->
+        <!-- <p>{{ usuario?.bio }}</p> -->
       </div>
       <div class="card-footer">
         <div>
-          <!-- <div>{{ usuario?.followers }}</div>
+          <div>{{ usuario?.followers }}</div>
           <div>{{ usuario?.following }}</div>
-          <div>{{ usuario?.public_repos }}</div> -->
+          <div>{{ usuario?.public_repos }}</div>
         </div>
       </div>
+      <button class="btn btn-primary">Ver perfil</button>
     </div>
   </section>
 </app-container>

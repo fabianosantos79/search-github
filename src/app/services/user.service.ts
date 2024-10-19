@@ -10,7 +10,6 @@ import { User } from '../../models/user';
 
 
 export class UserService {
-  titulo: string = '';
   baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
