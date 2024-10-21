@@ -1,10 +1,32 @@
 h1 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-family: "Kanit", sans-serif;
   font-size: 50px;
-  color: #ec4899;
+  color: #fff;
   text-shadow: 1, 1, white;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.form input {
+  width: 20%;
+  border-radius: 6px 0 0 6px;
+  padding: 6px 4px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: coral;
+}
+.btn-buscar {
+  padding: 4px 10px;
+  color: #00008b;
+  font-size: 18px;
+  border-radius: 0 6px 6px 0;
+  border: none;
+  background-color: #00ced1;
 }
 .card {
   padding: 10px;
@@ -12,16 +34,15 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
   background-color: #ec4899;
 }
 .card-header img {
   height: 210px;
+  width: 240px;
 }
 .card-container {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
-  width: 300px;
 }
 .card-body {
   display: flex;
@@ -29,4 +50,38 @@ h1 {
   padding: 15px;
   justify-content: center;
   align-items: center;
+}
+.card-body h2 {
+  font-weight: 600;
+}
+.card-body h4 {
+  font-weight: 300;
+}
+.card-footer {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-footer-itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.btn-perfil {
+  padding: 6px;
+  background-color: darkturquoise;
+}
+.btn-perfil a {
+  text-decoration: none;
+  color: darkblue;
+  font-size: 18px;
+}
+.card-footer-itens h5 {
+  font-weight: 300;
+}
+.card-footer-itens-item {
+  border-left: 1px solid darkblue;
+  border-right: 1px solid darkblue;
+  padding: 0010px 0[];
 }

@@ -11,6 +11,7 @@
     <button class="btn-buscar" (click)="enviar()">Buscar</button>
   </form>
 
+  @if(start){
   <section class="card-container">
     <div class="card">
       <div class="card-header">
@@ -18,17 +19,29 @@
       </div>
       <div class="card-body">
         <h2>{{ usuario?.name }}</h2>
-        <h4>{{ usuario?.login }}</h4>
+        <h4>&#64;{{ usuario?.login }}</h4>
         <!-- <p>{{ usuario?.bio }}</p> -->
       </div>
       <div class="card-footer">
-        <div>
-          <div>{{ usuario?.followers }}</div>
-          <div>{{ usuario?.following }}</div>
-          <div>{{ usuario?.public_repos }}</div>
+        <div class="card-footer-itens">
+          <div>
+            <h5>Seguidores</h5>
+            {{ usuario?.followers }}
+          </div>
+          <div class="card-footer-itens-item">
+            <h5>Seguindo</h5>
+            {{ usuario?.following }}
+          </div>
+          <div>
+            <h5>Repositorios</h5>
+            {{ usuario?.public_repos }}
+          </div>
         </div>
       </div>
-      <button class="btn btn-primary">Ver perfil</button>
+      <button class="btn-perfil">
+        <a href="{{ usuario?.html_url }}" target="_blank">Ver perfil</a>
+      </button>
     </div>
   </section>
+  }
 </app-container>

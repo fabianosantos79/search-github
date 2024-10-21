@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { ContainerComponent } from "./components/container/container.component";
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,27 @@ export class AppComponent{
 
   usuario: User | undefined;
   username: string = '';
+  start: string = '';
+  erroMessage: string = 'Usuário não encontrado';
 
-  constructor(private userService: UserService){}
+  constructor(
+    private userService: UserService,
+    private toaster: ToastrService
+  ){}
 
   enviar(){
-    this.userService.getUser(this.username).subscribe((user: User) => this.usuario = user);
+    this.start = this.username;
+    this.userService.getUser(this.username).subscribe({
+      next: (user: User) =>  {
+        this.usuario = user;
+        this.username = '';
+      },
+      error: e => {
+        if(e.error.message){
+          this.toaster.error('Usuário não encontrado')
+        }
+      }
+    });
   }
 
 }
