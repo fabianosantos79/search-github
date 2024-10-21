@@ -1,10 +1,9 @@
 h1 {
-  margin-bottom: 10px;
   font-weight: 700;
   font-family: "Kanit", sans-serif;
   font-size: 50px;
   color: #fff;
-  text-shadow: 1, 1, white;
+  text-shadow: 2px 2px 1px #000097;
 }
 .form {
   display: flex;
@@ -12,20 +11,24 @@ h1 {
   width: 100%;
 }
 .form input {
-  width: 20%;
+  width: 25%;
   border-radius: 6px 0 0 6px;
-  padding: 6px 4px;
+  padding: 6px 14px;
   border: none;
   outline: none;
-  font-size: 15px;
-  color: coral;
+  font-size: 20px;
+  color: #000097;
+}
+.form input::placeholder {
+  color: #c0c0c0;
+  font-size: 18px;
 }
 .btn-buscar {
   padding: 4px 10px;
-  color: #00008b;
+  color: #fff;
   font-size: 18px;
   border-radius: 0 6px 6px 0;
-  border: none;
+  border: 2px solid #00a6aa;
   background-color: #00ced1;
 }
 .card {
@@ -34,14 +37,24 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #ec4899;
+  /* background-color: #ec4899; */
+
+  /* background: rgba(236, 72, 153, 0.5);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+  border: 1px solid rgba(236, 72, 153, 0.25); */
+
+  background: rgba(216, 98, 234, 1);
+  -webkit-backdrop-filter: blur(43px);
+  backdrop-filter: blur(43px);
+  border: 3px solid rgba(216, 98, 234, 0.5);
 }
 .card-header img {
-  height: 210px;
+  height: 220px;
   width: 240px;
 }
 .card-container {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
 }
 .card-body {
@@ -53,13 +66,16 @@ h1 {
 }
 .card-body h2 {
   font-weight: 600;
+  color: #000097;
 }
 .card-body h4 {
   font-weight: 300;
+  color: #000097;
 }
 .card-footer {
   width: 100%;
   margin-bottom: 10px;
+  color: #000097;
 }
 
 .card-footer-itens {
@@ -70,11 +86,13 @@ h1 {
 }
 .btn-perfil {
   padding: 6px;
-  background-color: darkturquoise;
+  background-color: #00ced1;
+  border: 1px solid #000097;
+  border-radius: 10px;
 }
 .btn-perfil a {
   text-decoration: none;
-  color: darkblue;
+  color: #000097;
   font-size: 18px;
 }
 .card-footer-itens h5 {
@@ -83,5 +101,5 @@ h1 {
 .card-footer-itens-item {
   border-left: 1px solid darkblue;
   border-right: 1px solid darkblue;
-  padding: 0010px 0[];
+  padding: 0 10px;
 }
